@@ -1,6 +1,12 @@
+import sys
+import os
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from Connection.database_connection import DBConnect
 
-class library:
+class Library:
     def __init__(self):
         """
         Initialize the Library class with a database connection.
@@ -68,16 +74,3 @@ class library:
         return f"Employee ID {employee_id} deleted successfully."
 
 
-# # Optional: Example usage for testing
-# if __name__ == "__main__":
-#     library = Library()
-    
-#     # Example: Reading employees
-#     print("All Employees:")
-#     print(library.read_employees())
-    
-#     # Example: Updating an employee
-#     print(library.update_employee(1, name="John Doe", age=30))
-    
-#     # Example: Deleting an employee
-#     print(library.delete_employee(1))
