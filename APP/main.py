@@ -1,19 +1,29 @@
-from Library.List import Library
+import sys
+import os
 
-class main:
+# Add the parent directory to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from Library.Library import library
+
+def main():
+    lib = library()
     while True:
         print("\n\t 1.Add Employee\n ")
         print("\t 2.List Employee\n")
         print("\t 3.Update Employee\n")
         print("\t 4.Delete Employee\n")
+        print("\")
         choice=input("Enter your choice: ")
 
         if choice==1:
-            Library.create_employee
+            lib.create_employee
         elif choice==2:
-            Library.read_employees
+            lib.read_employees
         elif choice==3:
-            Library.update_employee
+            lib.update_employee
         elif choice==4:
-            Library.delete_employee
-        
+            lib.delete_employee
+
+if __name__=="__main__":
+    main()

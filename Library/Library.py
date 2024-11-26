@@ -1,7 +1,6 @@
 from Connection.database_connection import DBConnect
 
-
-class Library:
+class library:
     def __init__(self):
         """
         Initialize the Library class with a database connection.
