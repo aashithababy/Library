@@ -1,3 +1,4 @@
+import is_valid_name, is_valid_age, is_valid_doj
 import Employee
 
 class Library:
