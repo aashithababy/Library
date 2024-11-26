@@ -1,4 +1,4 @@
-from connection.database_connection import DBConnect
+from Connection.database_connection import DBConnect
 
 
 class Library:
@@ -16,6 +16,7 @@ class Library:
         query = "SELECT id, name, age, doj, created_on, is_active FROM employees"
         employees = self.db.connection.execute(query).fetchall()
         if not employees:
+
             return "No employees found."
         result = []
         for emp in employees:
