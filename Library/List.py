@@ -1,4 +1,4 @@
-from Models import Employee
+from Models.Employee import Employee
 
 class Library:
 
