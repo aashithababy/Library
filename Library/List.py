@@ -1,19 +1,8 @@
-import Employee
+from Models import Employee
 
 class Library:
-    def __init__(self):
-        """Initialize an empty employee repository."""
-        self.employees = {}
-
-    def create_employee(self, name, age, doj):
-        """Add a new employee to the repository."""
-        employee_id = len(self.employees) + 1
-        employee = Employee(name, age, doj)
-        self.employees[employee_id] = employee
-        return f"Employee {name} added with ID {employee_id}."
 
     def read_employees(self):
-        """List all employees."""
         if not self.employees:
             return "No employees found."
         return [f"ID: {eid}, {emp}" for eid, emp in self.employees.items()]
