@@ -24,8 +24,10 @@ def main():
             lib.update_employee
         elif choice==4:
             lib.delete_employee
-        else:
+        elif choice==5:
             break;
+        else:
+            print("Invalid Choice")
 
 if __name__=="__main__":
     main()
