@@ -13,7 +13,7 @@ def main():
         print("\t 2.List Employee\n")
         print("\t 3.Update Employee\n")
         print("\t 4.Delete Employee\n")
-        print("\")
+        print("\t 5.Good Bye")
         choice=input("Enter your choice: ")
 
         if choice==1:
@@ -24,6 +24,8 @@ def main():
             lib.update_employee
         elif choice==4:
             lib.delete_employee
+        else:
+            break;
 
 if __name__=="__main__":
     main()
